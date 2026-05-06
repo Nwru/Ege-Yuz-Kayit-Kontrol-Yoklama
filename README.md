@@ -65,41 +65,6 @@ Yüz tanıma projesi/
 └── attendance_logs.txt    # Yoklama kayıtları (okunabilir format)
 ```
 
-## Kurulum
-
-1. Gerekli paketleri yükleyin:
-```bash
-pip install -r requirements.txt
-```
-
-2. Uygulamayı çalıştırın:
-```bash
-python main.py
-```
-
-## EXE Dosyası Oluşturma
-
-Projeyi Windows'ta çalıştırılabilir bir .exe dosyasına dönüştürmek için:
-
-### Windows için:
-
-1. PyInstaller'ı yükleyin (requirements.txt ile birlikte yüklenir):
-```bash
-pip install -r requirements.txt
-```
-
-2. `build.bat` dosyasını çalıştırın:
-```bash
-build.bat
-```
-
-Veya manuel olarak:
-```bash
-python -m PyInstaller main.py --name=YuzTanimaSistemi --onefile --windowed --hidden-import=tkinter --hidden-import=cv2 --hidden-import=numpy --collect-all=cv2 --collect-all=tkinter
-```
-
-3. Oluşturulan exe dosyası `dist` klasöründe bulunacaktır: `dist\YuzTanimaSistemi.exe`
-
 ### Notlar:
 - Exe dosyası ilk çalıştırmada biraz yavaş açılabilir (paketlenmiş modüllerin açılması nedeniyle)
 - Exe dosyası ile birlikte `dataset` klasörü ve yoklama log dosyaları aynı dizinde oluşturulacaktır
@@ -139,28 +104,6 @@ Recognized names:
 - Ramazan (19240000836)
 Unknown count: 0
 ```
-
-## Özellikler ve Limitasyonlar
-
-### Güçlü Yönler
-- Gerçek zamanlı yüz tanıma
-- Otomatik yoklama kayıt sistemi
-- Çoklu kişi tanıma desteği
-- Kullanıcı dostu grafik arayüz
-- Tutarlı tanıma kontrolü ile hata azaltma
-
-### Limitasyonlar
-- Sadece web kamerası desteği
-- Işık koşullarına duyarlılık
-- Yüz açısı ve pozisyonuna bağımlılık
-- LBPH algoritmasının sınırlı doğruluk oranı
-
-## Geliştirici Notları
-
-- Sistem, her kişi için en az 40 örnek görüntü ile eğitilmelidir
-- Daha iyi sonuçlar için farklı açılardan ve ışık koşullarında görüntü toplanmalıdır
-- Güven eşiği değeri, tanıma hassasiyetini ayarlamak için değiştirilebilir
-- Ardışık tanıma sayısı, yanlış pozitifleri azaltmak için ayarlanabilir
 
 ## Lisans
 
